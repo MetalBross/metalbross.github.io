@@ -1,2 +1,2 @@
 # website_metalito
-debug and deploy website
+debug and deploy the website
