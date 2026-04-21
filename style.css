@@ -1,0 +1,12 @@
+.hey {
+    display: flex;
+    align-items: right;
+    align-content: right;
+    justify-content: flex-end;
+    margin-bottom: -11.8%;
+}
+.sa {
+display: flex;
+justify-content: flex-start;
+margin-bottom: -36%;
+}

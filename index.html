@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty y el León - Un Cuento de Amistad</title>
+    <style>
+        :root {
+            --pink-primary: #ffb7c5;
+            --pink-dark: #ff8fa3;
+            --cream: #fff5f7;
+            --gold: #ffd700;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--pink-primary);
+            color: #4a4a4a;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--cream);
+            width: 90%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 5px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: var(--pink-dark);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .story-content {
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--pink-dark);
+            font-weight: bold;
+        }
+
+        .scene {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 20px;
+            border: 2px dashed var(--pink-primary);
+        }
+
+        #character-display {
+            font-size: 80px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-magic {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: var(--pink-dark);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-magic:hover {
+            background-color: #ff5e78;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎀 Hello Kitty y el León 🦁</h1>
+    
+    <div class="story-content">
+        <p>Había una vez, en el corazón del <strong>Bosque de los Manzanos</strong>, un pequeño claro donde el sol siempre brillaba con un tono dorado. Allí, <span class="highlight">Hello Kitty</span> estaba organizando un picnic cuando escuchó un crujido enorme.</p>
+
+        <div class="scene">
+            <div id="character-display">🐱 🌳 🦁</div>
+            <p id="scene-caption"><i>¡Algo se mueve entre los árboles!</i></p>
+            <button class="btn-magic" onclick="makeMagic()">¡Hacer magia de amistad!</button>
+        </div>
+
+        <p>Apareció <strong>Leo</strong>, un león con una melena alborotada. No era feroz, solo estaba despeinado. Kitty sacó su cepillo y un <span class="highlight">lazo rojo de repuesto</span>. Al terminar, Leo estaba tan feliz que soltó un rugido de agradecimiento que hizo bailar a las flores.</p>
+    </div>
+
+    <footer>Hecho con amabilidad y código ✨</footer>
+</div>
+
+<script>
+    function makeMagic() {
+        const display = document.getElementById('character-display');
+        const caption = document.getElementById('scene-caption');
+        
+        // Cambiamos los emojis para mostrar el resultado del cuento
+        display.innerHTML = "🐱 ❤️ 🦁";
+        display.style.transform = "scale(1.2)";
+        
+        caption.innerHTML = "<strong>¡Kitty le ha puesto su lazo a Leo! ¡Ahora son mejores amigos!</strong>";
+        
+        // Efecto de confeti simple con colores
+        document.body.style.backgroundColor = "#fff5f7";
+        setTimeout(() => {
+            document.body.style.backgroundColor = "#ffb7c5";
+        }, 500);
+    }
+</script>
+
+</body>
+</html>
